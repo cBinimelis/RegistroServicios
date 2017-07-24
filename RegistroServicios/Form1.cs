@@ -12,6 +12,7 @@ namespace RegistroServicios
 {
     public partial class Form1 : Form
     {
+        conexion con = new conexion();
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +29,26 @@ namespace RegistroServicios
             // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.bd_reparacionDataSet.Usuario);
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ingresar = con.ejecutar("INSERT INTO Servicio (idTipoServicio, idUsuario, PrecioServicio) VALUES ('" + combo_servicio.SelectedValue + "','" + combo_cliente.SelectedValue + "','" + num_precio.Value + "')");
+                if (ingresar  >0)
+                {
+                    MessageBox.Show("Servicio ingresado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Ha habido un problema ingresando el servicio");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

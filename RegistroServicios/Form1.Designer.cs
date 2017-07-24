@@ -34,32 +34,32 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.combo_cliente = new System.Windows.Forms.ComboBox();
+            this.vUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_reparacionDataSet1 = new RegistroServicios.bd_reparacionDataSet1();
             this.combo_servicio = new System.Windows.Forms.ComboBox();
+            this.tipoServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_reparacionDataSet3 = new RegistroServicios.bd_reparacionDataSet3();
             this.num_precio = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.clientePlus = new System.Windows.Forms.Button();
+            this.servicioPlus = new System.Windows.Forms.Button();
             this.bd_reparacionDataSet = new RegistroServicios.bd_reparacionDataSet();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new RegistroServicios.bd_reparacionDataSetTableAdapters.UsuarioTableAdapter();
-            this.bd_reparacionDataSet1 = new RegistroServicios.bd_reparacionDataSet1();
-            this.vUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vUsersTableAdapter = new RegistroServicios.bd_reparacionDataSet1TableAdapters.vUsersTableAdapter();
             this.bd_reparacionDataSet2 = new RegistroServicios.bd_reparacionDataSet2();
             this.servicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicioTableAdapter = new RegistroServicios.bd_reparacionDataSet2TableAdapters.ServicioTableAdapter();
-            this.bd_reparacionDataSet3 = new RegistroServicios.bd_reparacionDataSet3();
-            this.tipoServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoServicioTableAdapter = new RegistroServicios.bd_reparacionDataSet3TableAdapters.TipoServicioTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_precio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,6 +110,16 @@
             this.combo_cliente.TabIndex = 4;
             this.combo_cliente.ValueMember = "idUsuario";
             // 
+            // vUsersBindingSource
+            // 
+            this.vUsersBindingSource.DataMember = "vUsers";
+            this.vUsersBindingSource.DataSource = this.bd_reparacionDataSet1;
+            // 
+            // bd_reparacionDataSet1
+            // 
+            this.bd_reparacionDataSet1.DataSetName = "bd_reparacionDataSet1";
+            this.bd_reparacionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // combo_servicio
             // 
             this.combo_servicio.DataSource = this.tipoServicioBindingSource;
@@ -120,6 +130,16 @@
             this.combo_servicio.Size = new System.Drawing.Size(150, 21);
             this.combo_servicio.TabIndex = 5;
             this.combo_servicio.ValueMember = "idTipoServicio";
+            // 
+            // tipoServicioBindingSource
+            // 
+            this.tipoServicioBindingSource.DataMember = "TipoServicio";
+            this.tipoServicioBindingSource.DataSource = this.bd_reparacionDataSet3;
+            // 
+            // bd_reparacionDataSet3
+            // 
+            this.bd_reparacionDataSet3.DataSetName = "bd_reparacionDataSet3";
+            this.bd_reparacionDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // num_precio
             // 
@@ -140,23 +160,23 @@
             this.num_precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.num_precio.ThousandsSeparator = true;
             // 
-            // button1
+            // clientePlus
             // 
-            this.button1.Location = new System.Drawing.Point(240, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.clientePlus.Location = new System.Drawing.Point(240, 72);
+            this.clientePlus.Name = "clientePlus";
+            this.clientePlus.Size = new System.Drawing.Size(25, 23);
+            this.clientePlus.TabIndex = 7;
+            this.clientePlus.Text = "+";
+            this.clientePlus.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // servicioPlus
             // 
-            this.button2.Location = new System.Drawing.Point(240, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.servicioPlus.Location = new System.Drawing.Point(240, 99);
+            this.servicioPlus.Name = "servicioPlus";
+            this.servicioPlus.Size = new System.Drawing.Size(25, 23);
+            this.servicioPlus.TabIndex = 8;
+            this.servicioPlus.Text = "+";
+            this.servicioPlus.UseVisualStyleBackColor = true;
             // 
             // bd_reparacionDataSet
             // 
@@ -171,16 +191,6 @@
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_reparacionDataSet1
-            // 
-            this.bd_reparacionDataSet1.DataSetName = "bd_reparacionDataSet1";
-            this.bd_reparacionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vUsersBindingSource
-            // 
-            this.vUsersBindingSource.DataMember = "vUsers";
-            this.vUsersBindingSource.DataSource = this.bd_reparacionDataSet1;
             // 
             // vUsersTableAdapter
             // 
@@ -200,16 +210,6 @@
             // 
             this.servicioTableAdapter.ClearBeforeFill = true;
             // 
-            // bd_reparacionDataSet3
-            // 
-            this.bd_reparacionDataSet3.DataSetName = "bd_reparacionDataSet3";
-            this.bd_reparacionDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoServicioBindingSource
-            // 
-            this.tipoServicioBindingSource.DataMember = "TipoServicio";
-            this.tipoServicioBindingSource.DataSource = this.bd_reparacionDataSet3;
-            // 
             // tipoServicioTableAdapter
             // 
             this.tipoServicioTableAdapter.ClearBeforeFill = true;
@@ -222,6 +222,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Ingresar Registro";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -229,8 +230,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 196);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.servicioPlus);
+            this.Controls.Add(this.clientePlus);
             this.Controls.Add(this.num_precio);
             this.Controls.Add(this.combo_servicio);
             this.Controls.Add(this.combo_cliente);
@@ -242,15 +243,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_precio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.servicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,8 +266,8 @@
         private System.Windows.Forms.ComboBox combo_cliente;
         private System.Windows.Forms.ComboBox combo_servicio;
         private System.Windows.Forms.NumericUpDown num_precio;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button clientePlus;
+        private System.Windows.Forms.Button servicioPlus;
         private bd_reparacionDataSet bd_reparacionDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private bd_reparacionDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
