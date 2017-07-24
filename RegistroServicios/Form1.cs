@@ -49,16 +49,16 @@ namespace RegistroServicios
             }
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet1.vUsers' Puede moverla o quitarla según sea necesario.
-            this.vUsersTableAdapter.Fill(this.bd_reparacionDataSet1.vUsers);
-        }
-
         private void clientePlus_Click(object sender, EventArgs e)
         {
             AgregarCliente ac = new AgregarCliente();
             ac.Show();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet1.vUsers' Puede moverla o quitarla según sea necesario.
+            this.vUsersTableAdapter.Fill(this.bd_reparacionDataSet1.vUsers);
         }
     }
 }
