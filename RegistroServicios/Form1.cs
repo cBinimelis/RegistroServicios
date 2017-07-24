@@ -24,8 +24,6 @@ namespace RegistroServicios
             this.tipoServicioTableAdapter.Fill(this.bd_reparacionDataSet3.TipoServicio);
             // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet2.Servicio' Puede moverla o quitarla según sea necesario.
             this.servicioTableAdapter.Fill(this.bd_reparacionDataSet2.Servicio);
-            // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet1.vUsers' Puede moverla o quitarla según sea necesario.
-            this.vUsersTableAdapter.Fill(this.bd_reparacionDataSet1.vUsers);
             // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.bd_reparacionDataSet.Usuario);
 
@@ -49,6 +47,18 @@ namespace RegistroServicios
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bd_reparacionDataSet1.vUsers' Puede moverla o quitarla según sea necesario.
+            this.vUsersTableAdapter.Fill(this.bd_reparacionDataSet1.vUsers);
+        }
+
+        private void clientePlus_Click(object sender, EventArgs e)
+        {
+            AgregarCliente ac = new AgregarCliente();
+            ac.Show();
         }
     }
 }

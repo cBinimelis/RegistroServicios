@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_reparacionDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_reparacionDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_reparacionDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -138,6 +143,17 @@
     </None>
     <None Include="bd_reparacionDataSet3.xss">
       <DependentUpon>bd_reparacionDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bd_reparacionDataSet4.xsc">
+      <DependentUpon>bd_reparacionDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_reparacionDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_reparacionDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_reparacionDataSet4.xss">
+      <DependentUpon>bd_reparacionDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

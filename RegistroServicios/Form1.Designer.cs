@@ -41,7 +41,6 @@
             this.bd_reparacionDataSet3 = new RegistroServicios.bd_reparacionDataSet3();
             this.num_precio = new System.Windows.Forms.NumericUpDown();
             this.clientePlus = new System.Windows.Forms.Button();
-            this.servicioPlus = new System.Windows.Forms.Button();
             this.bd_reparacionDataSet = new RegistroServicios.bd_reparacionDataSet();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new RegistroServicios.bd_reparacionDataSetTableAdapters.UsuarioTableAdapter();
@@ -51,6 +50,7 @@
             this.servicioTableAdapter = new RegistroServicios.bd_reparacionDataSet2TableAdapters.ServicioTableAdapter();
             this.tipoServicioTableAdapter = new RegistroServicios.bd_reparacionDataSet3TableAdapters.TipoServicioTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.servicioPlus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).BeginInit();
@@ -168,15 +168,7 @@
             this.clientePlus.TabIndex = 7;
             this.clientePlus.Text = "+";
             this.clientePlus.UseVisualStyleBackColor = true;
-            // 
-            // servicioPlus
-            // 
-            this.servicioPlus.Location = new System.Drawing.Point(240, 99);
-            this.servicioPlus.Name = "servicioPlus";
-            this.servicioPlus.Size = new System.Drawing.Size(25, 23);
-            this.servicioPlus.TabIndex = 8;
-            this.servicioPlus.Text = "+";
-            this.servicioPlus.UseVisualStyleBackColor = true;
+            this.clientePlus.Click += new System.EventHandler(this.clientePlus_Click);
             // 
             // bd_reparacionDataSet
             // 
@@ -224,6 +216,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // servicioPlus
+            // 
+            this.servicioPlus.Enabled = false;
+            this.servicioPlus.Location = new System.Drawing.Point(240, 99);
+            this.servicioPlus.Name = "servicioPlus";
+            this.servicioPlus.Size = new System.Drawing.Size(25, 23);
+            this.servicioPlus.TabIndex = 8;
+            this.servicioPlus.Text = "+";
+            this.servicioPlus.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +245,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.vUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_reparacionDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServicioBindingSource)).EndInit();
@@ -267,7 +270,6 @@
         private System.Windows.Forms.ComboBox combo_servicio;
         private System.Windows.Forms.NumericUpDown num_precio;
         private System.Windows.Forms.Button clientePlus;
-        private System.Windows.Forms.Button servicioPlus;
         private bd_reparacionDataSet bd_reparacionDataSet;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private bd_reparacionDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
@@ -281,6 +283,7 @@
         private System.Windows.Forms.BindingSource tipoServicioBindingSource;
         private bd_reparacionDataSet3TableAdapters.TipoServicioTableAdapter tipoServicioTableAdapter;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button servicioPlus;
     }
 }
 
